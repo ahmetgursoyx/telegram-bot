@@ -1,57 +1,24 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Spin Mini App</title>
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #111;
-        color: #fff;
-        text-align: center;
-        padding-top: 50px;
-    }
-    .btn {
-        background: #0a84ff;
-        padding: 15px 25px;
-        border-radius: 10px;
-        font-size: 20px;
-        cursor: pointer;
-        display: inline-block;
-        margin-top: 20px;
-    }
-    .result {
-        font-size: 28px;
-        margin-top: 40px;
-    }
-</style>
-
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <meta charset="UTF-8">
+  <title>Spin Wheel</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
-
 <body>
 
-<h1>🎰 Spin Game</h1>
-<p>Şansını dene!</p>
+<h2>🎡 VIP Spin Wheel</h2>
 
-<div class="btn" onclick="spin()">🎡 Spin</div>
+<div class="wheel-container">
+  <canvas id="wheel" width="400" height="400"></canvas>
+</div>
 
-<div class="result" id="resultBox"></div>
+<button id="spinBtn">500 ⭐ YILDIZ İLE ÇEVİR</button>
 
-<script>
-function spin() {
-    fetch("https://SENIN-BACKEND-ADRESIN/spin")
-    .then(res => res.json())
-    .then(data => {
-        document.getElementById("resultBox").innerHTML = data.result;
-    })
-    .catch(err => {
-        document.getElementById("resultBox").innerHTML = "Bağlantı hatası!";
-    });
-}
-</script>
+<p id="result"></p>
+
+<script src="script.js"></script>
 
 </body>
 </html>
