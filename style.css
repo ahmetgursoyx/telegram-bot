@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.wheel-container {
+    margin: 20px auto;
+}
+
+#spinBtn {
+    padding: 15px 25px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#spinBtn:active {
+    transform: scale(0.97);
+}
